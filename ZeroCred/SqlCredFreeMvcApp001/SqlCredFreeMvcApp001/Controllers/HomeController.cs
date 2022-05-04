@@ -19,6 +19,7 @@ namespace SqlCredFreeMvcApp001.Controllers
 
         public IActionResult Index()
         {
+            
             //            var connectingString = @"Server=tcp:credfreedemosqlsrv001.database.windows.net,1433;
             //Initial Catalog=credfreedemosqldb001;
             //Persist Security Info=False;
@@ -28,13 +29,14 @@ namespace SqlCredFreeMvcApp001.Controllers
             //Encrypt=True;
             //TrustServerCertificate=False;
             //Connection Timeout=30;";
-            var connectingString = @"Server=tcp:credfreedemosqlsrv001.database.windows.net,1433;
-Initial Catalog=credfreedemosqldb001;
-Persist Security Info=False;
-MultipleActiveResultSets=False;
-Encrypt=True;
-TrustServerCertificate=False;
-Connection Timeout=30;";
+
+            var connectingString = @"Server=tcp:testdbsrvr001.database.windows.net,1433;
+            Initial Catalog=credfreedemosqldb001;
+            Persist Security Info=False;
+            MultipleActiveResultSets=False;
+            Encrypt=True;
+            TrustServerCertificate=False;
+            Connection Timeout=30;";
 
             var capitals = new Dictionary<string, string>();
 
@@ -66,6 +68,9 @@ Connection Timeout=30;";
 
             ////return capitals;
             return View(caitalInfo);
+            
+
+            ////return View();
         }
 
         public IActionResult Privacy()
